@@ -1,12 +1,14 @@
-//=require './jquery-3.5.1.min.js'
-//=require './slick.js'
-//=require './select2.full.min.js'
-//=require './autosize.min.js'
+/* libs */
 
-//=require './fullpage.js'
-
-
-$(document).ready(function () {
+//= libs/jquery-3.3.1.min.js
+//= libs/jquery.fancybox.min.js
+//= libs/slick.min.js
+//= libs/fullpage_horiz.js
+//= libs/fullpage.extensions.min.js
 
 
-});
+/* my scripts */
+
+//= partials/components.js
+//= partials/header.js
+//= partials/main.js
