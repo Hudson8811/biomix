@@ -53,15 +53,7 @@ var productsMenu,
 	copyrightBlk,
 	copyrightText;
 
-
-$(document).ready(function () {
-	// $("input[name='phone']").mask(" +7 (999) 999-99-99");
-	productsMenu = $('.control-products-menu');
-	headerPhonePath = $('#header-phone .contact-phone__desktop-pic path');
-	headerCPT = $('#header-phone .contact-phone__text');
-	copyrightBlk = $('#copyright');
-	copyrightText = $('#copyright .copyright');
-
+function initFullPage(){
 	$('#fullpage').fullpage({
 		//options here
 		autoScrolling: true,
@@ -83,11 +75,6 @@ $(document).ready(function () {
 			} else {
 				productsMenu.removeClass('control-products-menu--active');
 			}
-
-
-
-
-
 
 
 			var newSection = $(destination['item']);
@@ -168,6 +155,16 @@ $(document).ready(function () {
 
 		}
 	});
+}
+
+$(document).ready(function () {
+	// $("input[name='phone']").mask(" +7 (999) 999-99-99");
+	productsMenu = $('.control-products-menu');
+	headerPhonePath = $('#header-phone .contact-phone__desktop-pic path');
+	headerCPT = $('#header-phone .contact-phone__text');
+	copyrightBlk = $('#copyright');
+	copyrightText = $('#copyright .copyright');
+
 	$('.js-change-section').click(function () {
 		//переход к секции
 		var slide = 0;
@@ -188,4 +185,10 @@ $(document).ready(function () {
 			fullpage_api.moveSlideRight();
 		});
 
+
+
+
+
+		initFullPage();
+		//fullpage_api.destroy('all');
 });

@@ -89,6 +89,7 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	transition-duration: .2s;
 
 	&__desktop-pic {
 		margin-right: 15px;
@@ -108,7 +109,9 @@
 
 	path {}
 
-	&:hover {}
+	&:hover {
+		opacity: .7;
+	}
 
 	&:active {}
 
