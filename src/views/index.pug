@@ -13,38 +13,210 @@ block main
 
 	#fullpage
 		.fp-section(data-section-control-id="home-control" data-item-color="#2DBD66" data-phone-color="#010066" data-copyright-color="#010066" data-copyright-white-bg="true")
-			h1 1
+			.sec-bg(style="background-image: url(../images/sec1.jpg)")
+			.container.container-default
+				h1.s1-heading Свежий воздух, чистая вода,
+					br
+					|  здоровая почва
+				.s1-description Мы производим продукты и оборудование для улучшения жизни, сохранения природы, экономии энергоресурсов и решения экологических проблем. Мы хотим и можем сделать мир чище,  жизнь безопаснее, защиту природы быстрой, лёгкой и эффективной.
+
 
 		.fp-section(data-section-control-id="mission-control" data-section-with-slides="true")
 			.fp-slide(data-anchor="1" data-item-color="#347EE9" data-phone-color="#ffffff" data-copyright-color="#ffffff")
-				h1 2
+				.sec-bg(style="background-image: url(../images/sec2.jpg)")
+				.container.container-default
+					.mission-label  Наша Миссия:
+					h2.mission-heading Свежий воздух
+					.mission-description Мы можем сделать воздух чистым вокруг любой фермы, любого мусорного полигона или любых очистных сооружений за одну минуту. Мы не маскируем запахи отдушкой, а устраняем причину газообразования, управляя биологическими процессами в отходах.
+					.mission-slider-controls
+						.msc-prev.msc-arrow.msc-arrow--disabled
+							svg(width='49' height='8' viewbox='0 0 49 8' fill='none' xmlns='http://www.w3.org/2000/svg')
+								path(d='M0.646446 4.35355C0.451183 4.15829 0.451183 3.84171 0.646446 3.64645L3.82843 0.464466C4.02369 0.269204 4.34027 0.269204 4.53553 0.464466C4.7308 0.659728 4.7308 0.976311 4.53553 1.17157L1.70711 4L4.53553 6.82843C4.7308 7.02369 4.7308 7.34027 4.53553 7.53553C4.34027 7.7308 4.02369 7.7308 3.82843 7.53553L0.646446 4.35355ZM49 4.5H1V3.5H49V4.5Z' fill='white')
+
+
+						.msc-digits
+							.msc-digits__this 1
+							.msc-digits__delimiter /
+							.msc-digits__of 5
+						.msc-next.msc-arrow.js-mission-next-slide
+							svg(width='49' height='8' viewbox='0 0 49 8' fill='none' xmlns='http://www.w3.org/2000/svg')
+								path(d='M48.3536 4.35355C48.5488 4.15829 48.5488 3.84171 48.3536 3.64645L45.1716 0.464466C44.9763 0.269204 44.6597 0.269204 44.4645 0.464466C44.2692 0.659728 44.2692 0.976311 44.4645 1.17157L47.2929 4L44.4645 6.82843C44.2692 7.02369 44.2692 7.34027 44.4645 7.53553C44.6597 7.7308 44.9763 7.7308 45.1716 7.53553L48.3536 4.35355ZM0 4.5H48V3.5H0V4.5Z' fill='white')
+
 			.fp-slide(data-anchor="2" data-item-color="#0473A8" data-phone-color="#ffffff" data-copyright-color="#ffffff")
-				h1 3
-			.fp-slide(data-anchor="3" data-item-color="#15477E" data-phone-color="#083D77" data-copyright-color="#083D77")
-				h1 4
+				.sec-bg(style="background-image: url(../images/sec3.jpg)")
+				.container.container-default
+					.mission-label  Наша Миссия:
+					h2.mission-heading Чистая вода
+					.mission-description “Поставил и забыл” - принцип работы наших автоматических фильтров промышленного уровня, не требующих обслуживания.
+					.mission-slider-controls
+						.msc-prev.msc-arrow.js-mission-prev-slide
+							svg(width='49' height='8' viewbox='0 0 49 8' fill='none' xmlns='http://www.w3.org/2000/svg')
+								path(d='M0.646446 4.35355C0.451183 4.15829 0.451183 3.84171 0.646446 3.64645L3.82843 0.464466C4.02369 0.269204 4.34027 0.269204 4.53553 0.464466C4.7308 0.659728 4.7308 0.976311 4.53553 1.17157L1.70711 4L4.53553 6.82843C4.7308 7.02369 4.7308 7.34027 4.53553 7.53553C4.34027 7.7308 4.02369 7.7308 3.82843 7.53553L0.646446 4.35355ZM49 4.5H1V3.5H49V4.5Z' fill='white')
+
+						.msc-digits
+							.msc-digits__this 2
+							.msc-digits__delimiter /
+							.msc-digits__of 5
+						.msc-next.msc-arrow.js-mission-next-slide
+							svg(width='49' height='8' viewbox='0 0 49 8' fill='none' xmlns='http://www.w3.org/2000/svg')
+								path(d='M48.3536 4.35355C48.5488 4.15829 48.5488 3.84171 48.3536 3.64645L45.1716 0.464466C44.9763 0.269204 44.6597 0.269204 44.4645 0.464466C44.2692 0.659728 44.2692 0.976311 44.4645 1.17157L47.2929 4L44.4645 6.82843C44.2692 7.02369 44.2692 7.34027 44.4645 7.53553C44.6597 7.7308 44.9763 7.7308 45.1716 7.53553L48.3536 4.35355ZM0 4.5H48V3.5H0V4.5Z' fill='white')
+
+			.fp-slide.slide-ohr-zdor(data-anchor="3" data-item-color="#15477E" data-phone-color="#083D77" data-copyright-color="#083D77")
+				.sec-bg(style="background-image: url(../images/sec4.jpg)")
+				.container.container-default
+					.mission-label  Наша Миссия:
+					h2.mission-heading Охрана здоровья
+					.mission-description Биоцид который мы производим работает по принципу окисления, а не отравляющего действия, действует мгновенно при минимальных дозах с минимальной экспозицией. Дезинфицирующие тоннели и арки для проточной обработки людей отличаются высокой эффективностью и экономичностью.
+					.mission-slider-controls
+						.msc-prev.msc-arrow.js-mission-prev-slide
+							svg(width='49' height='8' viewbox='0 0 49 8' fill='none' xmlns='http://www.w3.org/2000/svg')
+								path(d='M0.646446 4.35355C0.451183 4.15829 0.451183 3.84171 0.646446 3.64645L3.82843 0.464466C4.02369 0.269204 4.34027 0.269204 4.53553 0.464466C4.7308 0.659728 4.7308 0.976311 4.53553 1.17157L1.70711 4L4.53553 6.82843C4.7308 7.02369 4.7308 7.34027 4.53553 7.53553C4.34027 7.7308 4.02369 7.7308 3.82843 7.53553L0.646446 4.35355ZM49 4.5H1V3.5H49V4.5Z' fill='white')
+
+						.msc-digits
+							.msc-digits__this 3
+							.msc-digits__delimiter /
+							.msc-digits__of 5
+						.msc-next.msc-arrow.js-mission-next-slide
+							svg(width='49' height='8' viewbox='0 0 49 8' fill='none' xmlns='http://www.w3.org/2000/svg')
+								path(d='M48.3536 4.35355C48.5488 4.15829 48.5488 3.84171 48.3536 3.64645L45.1716 0.464466C44.9763 0.269204 44.6597 0.269204 44.4645 0.464466C44.2692 0.659728 44.2692 0.976311 44.4645 1.17157L47.2929 4L44.4645 6.82843C44.2692 7.02369 44.2692 7.34027 44.4645 7.53553C44.6597 7.7308 44.9763 7.7308 45.1716 7.53553L48.3536 4.35355ZM0 4.5H48V3.5H0V4.5Z' fill='white')
+
 			.fp-slide(data-anchor="4" data-item-color="#4E3956" data-phone-color="#ffffff" data-copyright-color="#ffffff")
-				h1 5
-			.fp-slide(data-anchor="5" data-item-color="#056774" data-phone-color="#ffffff" data-copyright-color="#056774")
-				h1 6
+				.sec-bg(style="background-image: url(../images/sec5.jpg)")
+				.container.container-default
+					.mission-label  Наша Миссия:
+					h2.mission-heading Экономия ресурсов
+					.mission-description Уникальная система водоподготовки обеспечивает максимальную защиту оборудования и сетей теплогенерации и ГВС в сочетании с экономией энергоносителей. Экономия электроэнергии на аэрации сточных вод сильно сокращает издержки предприятий.
+					.mission-slider-controls
+						.msc-prev.msc-arrow.js-mission-prev-slide
+							svg(width='49' height='8' viewbox='0 0 49 8' fill='none' xmlns='http://www.w3.org/2000/svg')
+								path(d='M0.646446 4.35355C0.451183 4.15829 0.451183 3.84171 0.646446 3.64645L3.82843 0.464466C4.02369 0.269204 4.34027 0.269204 4.53553 0.464466C4.7308 0.659728 4.7308 0.976311 4.53553 1.17157L1.70711 4L4.53553 6.82843C4.7308 7.02369 4.7308 7.34027 4.53553 7.53553C4.34027 7.7308 4.02369 7.7308 3.82843 7.53553L0.646446 4.35355ZM49 4.5H1V3.5H49V4.5Z' fill='white')
+
+						.msc-digits
+							.msc-digits__this 4
+							.msc-digits__delimiter /
+							.msc-digits__of 5
+						.msc-next.msc-arrow.js-mission-next-slide
+							svg(width='49' height='8' viewbox='0 0 49 8' fill='none' xmlns='http://www.w3.org/2000/svg')
+								path(d='M48.3536 4.35355C48.5488 4.15829 48.5488 3.84171 48.3536 3.64645L45.1716 0.464466C44.9763 0.269204 44.6597 0.269204 44.4645 0.464466C44.2692 0.659728 44.2692 0.976311 44.4645 1.17157L47.2929 4L44.4645 6.82843C44.2692 7.02369 44.2692 7.34027 44.4645 7.53553C44.6597 7.7308 44.9763 7.7308 45.1716 7.53553L48.3536 4.35355ZM0 4.5H48V3.5H0V4.5Z' fill='white')
+
+			.fp-slide(data-anchor="5" data-item-color="#056774" data-phone-color="#ffffff" data-copyright-color="#ffffff")
+				.sec-bg(style="background-image: url(../images/sec6.jpg)")
+				.container.container-default
+					.mission-label  Наша Миссия:
+					h2.mission-heading Защита природы
+					.mission-description Уникальная система водоподготовки обеспечивает максимальную защиту оборудования и сетей теплогенерации и ГВС в сочетании с экономией энергоносителей. Экономия электроэнергии на аэрации сточных вод сильно сокращает издержки предприятий.
+					.mission-slider-controls
+						.msc-prev.msc-arrow.js-mission-prev-slide
+							svg(width='49' height='8' viewbox='0 0 49 8' fill='none' xmlns='http://www.w3.org/2000/svg')
+								path(d='M0.646446 4.35355C0.451183 4.15829 0.451183 3.84171 0.646446 3.64645L3.82843 0.464466C4.02369 0.269204 4.34027 0.269204 4.53553 0.464466C4.7308 0.659728 4.7308 0.976311 4.53553 1.17157L1.70711 4L4.53553 6.82843C4.7308 7.02369 4.7308 7.34027 4.53553 7.53553C4.34027 7.7308 4.02369 7.7308 3.82843 7.53553L0.646446 4.35355ZM49 4.5H1V3.5H49V4.5Z' fill='white')
+
+						.msc-digits
+							.msc-digits__this 5
+							.msc-digits__delimiter /
+							.msc-digits__of 5
+						.msc-next.msc-arrow.msc-arrow--disabled
+							svg(width='49' height='8' viewbox='0 0 49 8' fill='none' xmlns='http://www.w3.org/2000/svg')
+								path(d='M48.3536 4.35355C48.5488 4.15829 48.5488 3.84171 48.3536 3.64645L45.1716 0.464466C44.9763 0.269204 44.6597 0.269204 44.4645 0.464466C44.2692 0.659728 44.2692 0.976311 44.4645 1.17157L47.2929 4L44.4645 6.82843C44.2692 7.02369 44.2692 7.34027 44.4645 7.53553C44.6597 7.7308 44.9763 7.7308 45.1716 7.53553L48.3536 4.35355ZM0 4.5H48V3.5H0V4.5Z' fill='white')
+
 		.fp-section(data-section-control-id="products-control" data-section-with-slides="true")
 			.fp-slide(data-anchor="bius" data-product="true" data-item-color="#2DBD66"  data-phone-color="#000000" data-copyright-color="#000000" data-copyright-white-bg="true")
-				h1 7
+				.sec-bg(style="background-image: url(../images/sec7.jpg)")
+				.container.container-product
+					.product-card
+						.prod-logo
+							img(src="img/bius.svg", alt="")
+						h2.prod-name Состав «Bius»
+						.prod-destiny Ускоритель биологических процессов
+						.prod-description Предназначен для удаления неприятных запахов (в том числе сероводорода, тиолов, аммиака и других соединений), возникающих в результате жизнедеятельности людей, сельскохозяйственных животных и птицы.  Может быть также использован в процессах биохимической очистки сточных вод и отходов пищевого производства. Продемонстрировал эффективность в очистке водоёмов и почв от загрязнений нефти и нефтепродуктов.
+						a.prod-link(href="") Перейти на сайт
 			.fp-slide(data-anchor="greenox"  data-product="true" data-item-color="#4E3956"  data-phone-color="#ffffff" data-copyright-color="#000000" data-copyright-white-bg="true")
-				h1 8
+				.sec-bg(style="background-image: url(../images/sec8.jpg)")
+				.container.container-product
+					.product-card
+						.prod-logo
+							img(src="img/greenox.svg", alt="")
+						h2.prod-name Состав «Greenox»
+						.prod-destiny Безопасная альтернатива хлору
+						.prod-description Дезинфекция любых предметов и поверхностей, помещений и оборудования, дезинфекция стоков, воды в системах питьевого водоснабжения – безопасная альтернатива хлору. Дезинвазия помёта, навоза, избыточного ила и обезвоженного осадка.  Обладает самым широким спектром действия и максимально эффективен для уничтожения всех вирусов, патогенных бактерий, плесени, грибов, водорослей, а также спор. Не оставляет следов, не образует хлорорганику.
+						a.prod-link(href="") Перейти на сайт
 			.fp-slide(data-anchor="horizont"  data-product="true" data-item-color="#CB9E5A"  data-phone-color="#ffffff" data-copyright-color="#000000" data-copyright-white-bg="true")
-				h1 9
+				.sec-bg(style="background-image: url(../images/sec9.jpg)")
+				.container.container-product
+					.product-card
+						.prod-logo
+							img(src="img/horizont.svg", alt="")
+						h2.prod-name Состав «Horizont»
+						.prod-destiny Разжижитель нефти
+						.prod-description Реагент ГОРИЗОНТ является разжижающим продуктом для снижения вязкости нефти, увеличения удельного веса нефти (по API), увеличения дебита нефтяных и газовых скважин. HORIZONT является отличным продуктом для обработки шлама в резервуарах для хранения нефти, шламовых амбарах, для оборудования нефтеперерабатывающих предприятий, а также удаления отложений асфальтенов и парафинов с внутренней поверхности трубопроводов транспортировки нефти и возвращения  к исходному размеру.
+						a.prod-link(href="") Перейти на сайт
 			.fp-slide(data-anchor="etna" data-product="true" data-item-color="#FC6847"  data-phone-color="#ffffff" data-copyright-color="#000000" data-copyright-white-bg="true")
-				h1 10
+				.sec-bg(style="background-image: url(../images/sec10.jpg)")
+				.container.container-product
+					.product-card
+						.prod-logo
+							img(src="img/.svg", alt="")
+						h2.prod-name  Состав «Etna»
+						.prod-destiny Антивоспламенитель
+						.prod-description Препарат, предназначенный для ликвидации аварийных разливов любых углеводородов или разливов топлива. Он мгновенно разлагает углеводороды и превращает их в негорючие соединения, не оставляющие скользких остатков и легко смываются водой. При обработке препаратом ЭТНА разлитого топлива, захватывает и поглощает летучие вещества. ЭТНА может успешно использоваться автозаправочными станциями, аэропортами, автопарками и другими предприятиями, где возможны разливы нефтепродуктов.
+						a.prod-link(href="") Перейти на сайт
 			.fp-slide(data-anchor="aquastar" data-product="true" data-item-color="#206CDE"  data-phone-color="#ffffff" data-copyright-color="#000000" data-copyright-white-bg="true")
-				h1  11
+				.sec-bg(style="background-image: url(../images/sec11.jpg)")
+				.container.container-product
+					.product-card
+						.prod-logo
+							img(src="img/.svg", alt="")
+						h2.prod-name Фильтры «Aquastar»
+						.prod-destiny Самоочищающиеся фильтры
+						.prod-description Предназначены для фильтрации воды в промышленных объёмах для городского водоснабжения, в том числе для открытых водозаборов и оборотной воды на производствах. Наши фильтры не требуют обслуживания и сервиса. Фильтры обеспечивают защиту для насосов и другого оборудования, удаляя механические частицы и являясь эффективным звеном очистки воды в системах коммунальной или промышленной водоподготовки. Качество фильтрации от 10 мкм.
+						a.prod-link(href="") Перейти на сайт
 			.fp-slide(data-anchor="ajerozoldez" data-product="true" data-item-color="#2660A4"  data-phone-color="#ffffff" data-copyright-color="#000000" data-copyright-white-bg="true")
-				h1 12
+				.sec-bg(style="background-image: url(../images/sec12.jpg)")
+				.container.container-product
+					.product-card
+						.prod-logo
+							img(src="img/.svg", alt="")
+						h2.prod-name Аэрозольдез
+						.prod-destiny Безопасная альтернатива хлору
+						.prod-description Установка Аэрозольная АЭРОЗОЛЬДЕЗ - кабина, типа “санпропускник”, для санитарной обработки и дезинфекции людей с целью исключения перезаражения вирусными и инфекционными заболеваниями. Это лёгкая конструкция каркасного типа с автоматической системой туманообразования внутри кабины. УА АЭРОЗОЛЬДЕЗ может быть установлен в любой проходной предприятия, бизнес-центра или любого общественного места.
+						a.prod-link(href="") Перейти на сайт
 			.fp-slide(data-anchor="aquasol" data-product="true" data-item-color="#35AEE3"  data-phone-color="#ffffff" data-copyright-color="#000000" data-copyright-white-bg="true")
-				h1 13
+				.sec-bg(style="background-image: url(../images/sec13.jpg)")
+				.container.container-product
+					.product-card
+						.prod-logo
+							img(src="img/aquasol.svg", alt="")
+						h2.prod-name Состав «Aquasol»
+						.prod-destiny Ингибитор накипи и коррозии
+						.prod-description Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+						a.prod-link(href="") Перейти на сайт
 			.fp-slide(data-anchor="agronix" data-product="true" data-item-color="#CB9E5A"  data-phone-color="#ffffff" data-copyright-color="#000000" data-copyright-white-bg="true")
-				h1 14
+				.sec-bg(style="background-image: url(../images/sec14.jpg)")
+				.container.container-product
+					.product-card
+						.prod-logo
+							img(src="img/.svg", alt="")
+						h2.prod-name Система «Agronix»
+						.prod-destiny Безопасная альтернатива хлору
+						.prod-description Многоцелевой реагент «Horizont» - концентрированный разжижающий продукт, созданный на базе использования самых инновационных химических решений с целью снижения вязкости нефти и увеличения дебита нефтяных и газовых скважин. Является отличным продуктом для обработки шлама в резервуарах для хранения нефти, шламовых амбарах
+						a.prod-link(href="") Перейти на сайт
 		.fp-section( data-section-control-id="contacts-control" data-item-color="#2DBD66" data-phone-color="#010066" data-copyright-color="#010066" data-copyright-white-bg="true")
-			h1 15
+			.sec-bg(style="background-image: url(../images/sec1.jpg)")
+			.sec-bg-map(style="background-image: url(../images/map.jpg)")
+			.container.container-default
+				.contact-wrap
+					h2.contacts-title Обратная связь
+					.contacts-main
+						.contacts-main__item
+							.contacts-main__bold Компания ООО «Biomix»
+							.contacts-main__default Россия, 603037, г. Нижний Новгород ул. Федосеенко, д. 57А
+						.contacts-main__item
+							a.contacts-main__bold(href="") +7 (950) 353-9999
+							a.contacts-main__default(href="") manger@biomix.site
+					a.ask-question-link(href="")
+						span Задать вопрос
+						svg(width='30' height='16' viewbox='0 0 30 16' fill='none' xmlns='http://www.w3.org/2000/svg')
+							path(d='M29.7071 8.70711C30.0976 8.31658 30.0976 7.68342 29.7071 7.29289L23.3431 0.928932C22.9526 0.538408 22.3195 0.538408 21.9289 0.928932C21.5384 1.31946 21.5384 1.95262 21.9289 2.34315L27.5858 8L21.9289 13.6569C21.5384 14.0474 21.5384 14.6805 21.9289 15.0711C22.3195 15.4616 22.9526 15.4616 23.3431 15.0711L29.7071 8.70711ZM0 9H29V7H0V9Z' fill='#010066')
+
 
 	header.site-header
 		.sh-main

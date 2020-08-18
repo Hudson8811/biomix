@@ -94,6 +94,7 @@
 		margin-right: 15px;
 
 		path {
+			transition-duration: .2s;
 			fill: #010066;
 		}
 	}
@@ -102,7 +103,7 @@
 		font-weight: 500;
 		font-size: 18px;
 		line-height: 135%;
-		color: #010066;
+		color: #010066;	transition-duration: .2s;
 	}
 
 	path {}
@@ -192,7 +193,7 @@
 	right: 86px;
 	top: 0;
 	padding: 8px 32px;
-	width: 247px;
+	width: 241px;
 	box-sizing: border-box;
 	background: #2DBD66;
 	border-radius: 10px 0 0 10px;
@@ -206,36 +207,40 @@
 		pointer-events: all;
 	}
 
-	.control-products-title {
-		font-weight: 500;
-		font-size: 18px;
-		line-height: 160%;
-		text-transform: uppercase;
 
-		color: #FFFFFF;
-	}
+}
+.control-products-title {
+	font-weight: 500;
+	font-size: 18px;
+	line-height: 160%;
+	text-transform: uppercase;
 
-	.control-products-items {
-		margin-top: 40px;
-	}
-
-	.control-products-item {
-
-		font-style: normal;
-		font-weight: 500;
-		font-size: 15px;
-		line-height: 150%;
-		color: #FFFFFF;
-		cursor: pointer;
-
-		&--active,
-		&:hover {
-			opacity: 0.52;
-		}
-
-	}
+	color: #FFFFFF;
 }
 
+.control-products-items {
+	margin-top: 40px;
+}
+
+.control-products-item {
+
+	font-style: normal;
+	font-weight: 500;
+	font-size: 15px;
+	line-height: 150%;
+	color: #FFFFFF;
+	cursor: pointer;
+	transition-duration: .2s;
+
+	&--active,
+	&:hover {
+		opacity: 0.52;
+	}
+	&:not(:last-child){
+		margin-bottom: 20px;
+	}
+
+}
 /////////////////////////
 
 .container {
@@ -267,8 +272,13 @@
 	border-radius: 10px;
 	padding: 0 24px;
 
+	transition-duration: .2s;
 	&--bgw {
 		background: #FFFFFF;
+	}
+	svg path{
+
+	transition-duration: .2s;
 	}
 }
 
@@ -282,4 +292,19 @@
 	align-items: center;
 
 	color: #010066;
+	transition-duration: .2s;
+}
+
+.sec-bg{
+
+}
+.fp-table{
+	z-index: 5;
+	position: relative;
+}
+.fp-table.active{
+	z-index: 15;
+}
+.fp-tablecell{
+	position: relative;
 }

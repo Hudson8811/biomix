@@ -46,8 +46,8 @@ $(document).ready(function () {
 			var control = $('#' + newSection.attr('data-section-control-id'));
 			control.addClass('control-main-item--active')
 				.siblings().removeClass('control-main-item--active');
-
-			if (!fullpage_api.getActiveSlide()) {
+			var activeSlide=fullpage_api.getActiveSlide();
+			if (!activeSlide) {
 				var newSection = $(destination['item']);
 
 				if (newSection.attr('data-copyright-white-bg') && newSection.attr('data-copyright-white-bg') === "true") {
@@ -61,6 +61,31 @@ $(document).ready(function () {
 				control.find('svg path').css('fill', newSection.attr('data-item-color'));
 				//console.log(newSection.attr('data-item-color'));
 			}
+			else{
+
+				var newSlide = $(activeSlide['item']);
+
+
+				if(newSlide.attr('data-product')==="true"){
+					$('.control-products-item[data-slide-anchor="'+activeSlide['anchor']+'"]').addClass('control-products-item--active').siblings().removeClass('control-products-item--active');
+				}
+
+				if (newSlide.attr('data-copyright-white-bg') && newSlide.attr('data-copyright-white-bg') === "true") {
+					copyrightBlk.addClass('copyright-block--bgw');
+				} else {
+					copyrightBlk.removeClass('copyright-block--bgw');
+				}
+				copyrightText.css('color', newSlide.attr('data-copyright-color'));
+				headerPhonePath.css('fill', newSlide.attr('data-phone-color'));
+				headerCPT.css('color', newSlide.attr('data-phone-color'));
+
+				var control = $('#' + newSlide.closest('.fp-section').attr('data-section-control-id'));
+				control.addClass('control-main-item--active').siblings('.control-main-item').removeClass('control-main-item--active');
+
+				control.find('svg path').css('fill', newSlide.attr('data-item-color'));
+				productsMenu.css('background', newSlide.attr('data-item-color'));
+
+			}
 
 		},
 		afterSlideLoad: function (section, origin, destination, direction) { //смена слайда
@@ -68,10 +93,14 @@ $(document).ready(function () {
 			console.log(origin);
 			console.log(destination);
 			console.log(direction);*/
+			//console.log('afterSlideLoad');
 
 			var newSlide = $(destination['item']);
 
 
+			if(newSlide.attr('data-product')==="true"){
+				$('.control-products-item[data-slide-anchor="'+destination['anchor']+'"]').addClass('control-products-item--active').siblings().removeClass('control-products-item--active');
+			}
 
 			if (newSlide.attr('data-copyright-white-bg') && newSlide.attr('data-copyright-white-bg') === "true") {
 				copyrightBlk.addClass('copyright-block--bgw');
@@ -84,9 +113,9 @@ $(document).ready(function () {
 
 			var control = $('#' + newSlide.closest('.fp-section').attr('data-section-control-id'));
 			control.addClass('control-main-item--active').siblings('.control-main-item').removeClass('control-main-item--active');
-			console.log(control
-				.siblings('.control-main-item').length);
+
 			control.find('svg path').css('fill', newSlide.attr('data-item-color'));
+			productsMenu.css('background', newSlide.attr('data-item-color'));
 
 		}
 	});
@@ -102,4 +131,12 @@ $(document).ready(function () {
 		new fullpage('#fullpage', {
 			sectionsColor: ['yellow', 'orange']
 		 });*/
+
+		 $('.js-mission-prev-slide').click(function(){
+			fullpage_api.moveSlideLeft();
+		});
+		$('.js-mission-next-slide').click(function(){
+			fullpage_api.moveSlideRight();
+		});
+
 });
