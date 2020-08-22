@@ -4,7 +4,7 @@ var productsMenu,
 	copyrightBlk,
 	copyrightText;
 
-function initFullPage(){
+function initFullPage() {
 	$('#fullpage').fullpage({
 		//options here
 		autoScrolling: true,
@@ -13,7 +13,7 @@ function initFullPage(){
 		scrollHorizontally: true,
 		anchors: ['home', 'mission', 'products', 'contacts'],
 		controlArrows: false,
-		keyboardScrolling: false,
+	//	keyboardScrolling: false,
 		sectionSelector: '.fp-section',
 		slideSelector: '.fp-slide',
 		afterLoad: function (origin, destination, direction) { //переход между секциями
@@ -33,7 +33,7 @@ function initFullPage(){
 			var control = $('#' + newSection.attr('data-section-control-id'));
 			control.addClass('control-main-item--active')
 				.siblings().removeClass('control-main-item--active');
-			var activeSlide=fullpage_api.getActiveSlide();
+			var activeSlide = fullpage_api.getActiveSlide();
 			if (!activeSlide) {
 				var newSection = $(destination['item']);
 
@@ -47,14 +47,13 @@ function initFullPage(){
 				headerCPT.css('color', newSection.attr('data-phone-color'));
 				control.find('svg path').css('fill', newSection.attr('data-item-color'));
 				//console.log(newSection.attr('data-item-color'));
-			}
-			else{
+			} else {
 
 				var newSlide = $(activeSlide['item']);
 
 
-				if(newSlide.attr('data-product')==="true"){
-					$('.control-products-item[data-slide-anchor="'+activeSlide['anchor']+'"]').addClass('control-products-item--active').siblings().removeClass('control-products-item--active');
+				if (newSlide.attr('data-product') === "true") {
+					$('.control-products-item[data-slide-anchor="' + activeSlide['anchor'] + '"]').addClass('control-products-item--active').siblings().removeClass('control-products-item--active');
 				}
 
 				if (newSlide.attr('data-copyright-white-bg') && newSlide.attr('data-copyright-white-bg') === "true") {
@@ -85,8 +84,8 @@ function initFullPage(){
 			var newSlide = $(destination['item']);
 
 
-			if(newSlide.attr('data-product')==="true"){
-				$('.control-products-item[data-slide-anchor="'+destination['anchor']+'"]').addClass('control-products-item--active').siblings().removeClass('control-products-item--active');
+			if (newSlide.attr('data-product') === "true") {
+				$('.control-products-item[data-slide-anchor="' + destination['anchor'] + '"]').addClass('control-products-item--active').siblings().removeClass('control-products-item--active');
 			}
 
 			if (newSlide.attr('data-copyright-white-bg') && newSlide.attr('data-copyright-white-bg') === "true") {
@@ -107,6 +106,7 @@ function initFullPage(){
 		}
 	});
 }
+
 
 $(document).ready(function () {
 	// $("input[name='phone']").mask(" +7 (999) 999-99-99");
@@ -129,17 +129,35 @@ $(document).ready(function () {
 			sectionsColor: ['yellow', 'orange']
 		 });*/
 
-		 $('.js-mission-prev-slide').click(function(){
-			fullpage_api.moveSlideLeft();
-		});
-		$('.js-mission-next-slide').click(function(){
-			fullpage_api.moveSlideRight();
-		});
+	$('.js-mission-prev-slide').click(function () {
+		fullpage_api.moveSlideLeft();
+	});
+	$('.js-mission-next-slide').click(function () {
+		fullpage_api.moveSlideRight();
+	});
 
 
 
-
-
+	if (window.matchMedia("(min-width: 908px) and (min-height: 760px)").matches) {
 		initFullPage();
-		//fullpage_api.destroy('all');
+	} else {
+
+
+	}
+
+	$(window).resize(function () {
+		if (window.matchMedia("(min-width: 908px) and (min-height: 760px)").matches) {
+			if ((!$('#fullpage').hasClass('fullpage-wrapper')) || $('#fullpage').hasClass('fp-destroyed')) {
+				initFullPage();
+			}
+		} else {
+			if ($('#fullpage').hasClass('fullpage-wrapper') || (!$('#fullpage').hasClass('fp-destroyed'))) {
+				fullpage_api.destroy('all');
+				$('.js-fp-slide').addClass('fp-slide');
+				$('.js-fp-section').addClass('fp-section');
+
+			}
+		}
+	})
+
 });

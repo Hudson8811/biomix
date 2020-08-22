@@ -18,3 +18,17 @@
 
 
 }
+@media (min-width: 908px) and (min-height: 760px){
+
+}
+@media (max-width: 907px), (max-height: 759px){
+    .control-panel-wrap, .copyright-wrap{
+        display: none;
+    }
+    .fp-slide,.fp-section{
+        float: none;
+    }
+    .fp-slide{
+        position: relative;
+    }
+}

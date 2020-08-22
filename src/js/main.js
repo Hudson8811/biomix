@@ -1,6 +1,6 @@
 /* libs */
 
-//= libs/jquery-3.3.1.min.js
+//= libs/jquery-3.5.1.min.js
 //= libs/jquery.fancybox.min.js
 //= libs/slick.min.js
 //= libs/fullpage_horiz.js
