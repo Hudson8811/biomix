@@ -1,0 +1,8 @@
+mixin popup()
+	#popup-consult.popup-consult(style='display: none;')
+		.popup-consult__top
+			.popup-consult__title Получить <br> консультацию
+			form(action='/' method='POST').popup-consult__form
+				+input('text', 'surname', 'ФИО')
+				+input('phone', 'phone', 'Номер телефона')
+				+input('email', 'email', 'Email')

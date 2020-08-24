@@ -7,6 +7,7 @@
     <meta name="keywords" content="">
     <meta property="og:image" content="images/logo.svg">
     <meta name="format-detection" content="telephone=no">
+    <title>Biomix</title>
     <link href="css/main.css" rel="stylesheet">
     <!--title= `${page.title}`-->
   </head>
@@ -44,6 +45,16 @@
       </div>
     </main>
     <footer class="site-footer"></footer>
+    <div class="popup-consult" id="popup-consult" style="display: none;">
+      <div class="popup-consult__top">
+        <div class="popup-consult__title">Получить <br> консультацию</div>
+        <form class="popup-consult__form" action="/" method="POST">
+          <input class="input-text" type="text" name="surname" placeholder="ФИО">
+          <input class="input-text" type="phone" name="phone" placeholder="Номер телефона">
+          <input class="input-text" type="email" name="email" placeholder="Email">
+        </form>
+      </div>
+    </div>
     <script src="js/main.js"></script>
   </body>
 </html>

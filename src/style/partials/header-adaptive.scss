@@ -1,0 +1,32 @@
+@media (max-width: 907px) {
+	.sh-logo-wrap {
+		width: 100%;
+		padding: 15px 24px;
+		justify-content: space-between;
+
+		.sh-logo {
+			height: 38px;
+		}
+	}
+
+	.sh-nav-mobile {
+		display: flex;
+	}
+
+	.sh-burger {
+		display: none;
+	}
+
+	.contact-phone {
+		margin-top: 0;
+
+		&__mobile-pic {
+			display: block;
+		}
+
+		&__desktop-pic,
+		&__text {
+			display: none;
+		}
+	}
+}

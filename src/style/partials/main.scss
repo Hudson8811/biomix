@@ -154,6 +154,14 @@ body {
 	}
 }
 
+.msc-arrow-desktop {
+	display: block;
+}
+
+.msc-arrow-mobile {
+	display: none;
+}
+
 .msc-prev {}
 
 .msc-next {}
@@ -175,6 +183,11 @@ body {
 }
 
 //////////////////
+
+.fp-tab,
+.fp-tabs-title {
+	display: none;
+}
 
 .product-card {
 	padding: 40px 64px 85px 48px;

@@ -2,6 +2,7 @@ doctype html
 
 block vars
 include ../components/_mixins
+include ../partials/popup
 
 html(lang="ru")
 	head
@@ -11,6 +12,7 @@ html(lang="ru")
 		meta(name="keywords" content="")
 		meta(property="og:image" content="images/logo.svg")
 		meta(name="format-detection" content="telephone=no")
+		title Biomix
 		link(href="css/main.css" rel="stylesheet")
 
 		//title= `${page.title}`
@@ -25,7 +27,7 @@ html(lang="ru")
 		block footer
 			include ../partials/_footer
 
-		block modals
+		+popup()
 
 
 		script(src="js/main.js")

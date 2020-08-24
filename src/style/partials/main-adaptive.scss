@@ -32,3 +32,263 @@
         position: relative;
     }
 }
+
+@media (max-width: 907px) {
+    .container {
+        max-width: calc(100% - 17px * 2);
+    }
+
+    .container-default {
+        padding-top: 181px;
+        padding-bottom: 214px;
+        padding-right: 0;
+    }
+
+    .container-mission {
+        padding-top: 71px;
+        padding-bottom: 57px;
+    }
+
+    .container-product {
+        padding-right: 0;
+        padding-top: 147px;
+        margin-bottom: 62px;
+    }
+
+    .container-contact {
+        padding-top: 80px;
+        padding-bottom: 64px;
+    }
+
+    .sec-bg {
+        &--mission {
+            height: 280px;
+        }
+
+        &--product {
+            height: 28%;
+        }
+    }
+
+    .s1-heading {
+        font-size: 22px;
+        line-height: 30px;
+
+        br {
+            display: none;
+        }
+    }
+
+    .s1-description {
+        font-size: 15px;
+        line-height: 23px;
+        margin-top: 34px;
+    }
+
+    .mission-label {
+        font-size: 15px;
+        line-height: 23px;
+        padding-left: 26px;
+    }
+
+    .mission-heading {
+        font-size: 30px;
+        line-height: 41px;
+        padding-left: 26px;
+    }
+
+    .mission-bottom-wrap {
+        padding: 32px 25px 20px;
+        margin-top: 37px;
+    }
+
+    .slide-ohr-zdor {
+        .mission-description,
+        .msc-digits {
+            color: #fff;
+        }
+        
+        .msc-arrow svg path {
+            fill: #fff;
+        }
+    }
+    
+    .mission-description {
+        font-size: 15px;
+        line-height: 23px;
+        color: #fff;
+        font-weight: 400;
+        margin-top: 0;
+    }
+
+    .fp-section[data-section-control-id="mission-control"] {
+        .fp-slide {
+            float: left;
+            height: auto;
+        }
+    }
+
+    .fp-section[data-section-control-id="products-control"] {
+        .fp-slide {
+            display: none;
+        }
+    }
+
+    .mission-slider-controls {
+        margin-top: 35px;
+    }
+
+    .msc-arrow {
+        width: 33px;
+        height: 12px;
+    }
+
+    .msc-arrow-desktop {
+        display: none;
+    }
+
+    .msc-arrow-mobile {
+        display: block;
+    }
+
+    .msc-digits {
+        font-size: 18px;
+        margin: 0 16px;
+    }
+
+    .msc-digits__delimiter,
+    .msc-digits__of {
+        font-size: 14px;
+    }
+
+    .fp-tabs-title {
+        font-size: 30px;
+        line-height: 41px;
+        font-weight: bold;
+        color: #000;
+        text-align: center;
+        margin: 0 18px 30px;
+    }
+
+    .fp-tab {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 21px 16px 23px 17px;
+
+        &__title,
+        &__text {
+            color: #fff;
+        }
+
+        &__title {
+            font-family: 'Gotham Pro';
+            font-size: 20px;
+            line-height: 27px;
+        }
+
+        &__text {
+            font-size: 15px;
+            line-height: 20px;
+        }
+
+        &__arrow {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 22px;
+            height: 51px;
+            padding-left: 16px;
+            border-left: 1px solid rgba(255, 255, 255, 0.3);
+
+            svg {
+                transition: transform 0.3s ease;
+            }
+        }
+
+        &--active .fp-tab__arrow svg {
+            transform: rotate(180deg);
+        }
+    }
+
+    .product-card {
+        padding: 32px 21px 41px;
+        border-radius: 0;
+        width: 100%;
+    }
+
+    .prod-name {
+        font-size: 22px;
+        line-height: 30px;
+    }
+
+    .prod-destiny {
+        line-height: 24px;
+        margin-top: 8px;
+    }
+
+    .prod-description {
+        margin-top: 19px;
+        line-height: 23px;
+    }
+
+    .contact-bg {
+        display: flex;
+        flex-wrap: wrap;
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+
+        .sec-bg,
+        .sec-bg-map {
+            width: 100%;
+            position: relative;
+            top: 0;
+            left: 0;
+            right: auto;
+        }
+    }
+
+    .contact-wrap {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .contacts-title {
+        font-size: 22px;
+        line-height: 30px;
+    }
+
+    .contacts-main {
+        margin-top: 41px;
+
+        &__bold {
+            font-size: 18px;
+            line-height: 27px;
+        }
+
+        &__default {
+            font-size: 18px;
+        }
+    }
+
+    .contacts-main__item + .contacts-main__item {
+        margin-top: 32px;
+    }
+
+    .ask-question-link {
+        font-size: 18px;
+        margin-top: 31px;
+    }
+
+    .copyright-wrap--mobile {
+        display: block;
+        bottom: -86%;
+
+        .copyright-block {
+            margin: 0 auto;
+        }
+    }
+}

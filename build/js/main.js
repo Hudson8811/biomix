@@ -158,7 +158,7 @@ function initFullPage() {
 
 
 $(document).ready(function () {
-	// $("input[name='phone']").mask(" +7 (999) 999-99-99");
+	$("input[name='phone']").mask(" +7 (999) 999-99-99");
 	productsMenu = $('.control-products-menu');
 	headerPhonePath = $('#header-phone .contact-phone__desktop-pic path');
 	headerCPT = $('#header-phone .contact-phone__text');
@@ -190,8 +190,21 @@ $(document).ready(function () {
 	if (window.matchMedia("(min-width: 908px) and (min-height: 760px)").matches) {
 		initFullPage();
 	} else {
+		$.each($('.mission-bottom-wrap'), function () {
+			$(this).css('background-color', $(this).parent().parent('.fp-slide').attr('data-item-color'))
+		});
 
+		$('.fp-section[data-section-control-id="mission-control"]').slick({
+			slidesToShow: 1,
+			slidesToScroll: 1,
+			prevArrow: $('.js-mission-prev-slide'),
+			nextArrow: $('.js-mission-next-slide')
+		});
 
+		$('.fp-tab').click(function () {
+			$(this).next().slideToggle(300);
+			$(this).toggleClass('fp-tab--active');
+		});
 	}
 
 	$(window).resize(function () {

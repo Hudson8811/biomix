@@ -1,10 +1,23 @@
 .sh-burger {
 	position: relative;
 	display: none;
-	width: 34px;
-	height: 26px;
+	width: 28px;
+	height: 35px;
 	cursor: pointer;
 	transition-duration: .2s;
+	margin-right: 47px;
+
+	&::after {
+		content: '';
+		display: block;
+		width: 1px;
+		height: 100%;
+		background: #D8D8EB;
+		position: relative;
+		top: 0;
+		right: 0;
+		margin: 0 51px;
+	}
 
 	span,
 	span::before,
@@ -12,11 +25,11 @@
 		position: absolute;
 		top: 50%;
 		left: 50%;
-		width: 34px;
+		width: 26px;
 		height: 2px;
-		margin-top: -1px;
-		margin-left: -17px;
-		background-color: #fff;
+		margin-top: 1px;
+		margin-left: -13px;
+		background-color: #010066;
 	}
 
 	span::before,
@@ -26,16 +39,14 @@
 	}
 
 	span::before {
-		transform: translateY(-12px);
+		transform: translateY(-10px);
 	}
 
 	span::after {
-		transform: translateY(12px);
+		transform: translateY(6px);
 	}
 
 	&--active {
-		background: #F5F6FB;
-
 		span {
 			height: 0;
 
@@ -57,6 +68,7 @@
 	position: absolute;
 	top: 0;
 	width: 100%;
+	z-index: 50;
 }
 
 .sh-main {
@@ -98,6 +110,10 @@
 			transition-duration: .2s;
 			fill: #010066;
 		}
+	}
+
+	&__mobile-pic {
+		display: none;
 	}
 
 	&__text {
