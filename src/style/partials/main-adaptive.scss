@@ -1,4 +1,4 @@
-@media screen and (max-width:1400px) {
+@media screen and (max-width:1600px) {
     .copyright-block {
         margin-bottom: 20px;
     }
@@ -6,7 +6,9 @@
     .nav-info {
         bottom: 20px;
     }
+}
 
+@media screen and (max-width:1400px) {
     .container-default {
         padding-bottom: 80px;
     }
@@ -19,8 +21,6 @@
     .prod-name {
         margin-top: 30px;
     }
-
-
 }
 @media (min-width: 908px) and (min-height: 760px){
 
@@ -74,7 +74,7 @@
         }
 
         &--product {
-            height: 28%;
+            height: 210px;
         }
     }
 
@@ -210,12 +210,13 @@
             border-left: 1px solid rgba(255, 255, 255, 0.3);
 
             svg {
+                transform: rotate(180deg);
                 transition: transform 0.3s ease;
             }
         }
 
         &--active .fp-tab__arrow svg {
-            transform: rotate(180deg);
+            transform: none;
         }
     }
 

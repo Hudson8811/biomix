@@ -387,7 +387,9 @@
         <div class="js-fp-section fp-section" data-section-control-id="con tacts-control" data-item-color="#2DBD66" data-phone-color="#010066" data-copyright-color="#010066" data-copyright-white-bg="true">
           <div class="contact-bg">
             <div class="sec-bg" style="background-image: url(images/sec1.jpg)"></div>
-            <div class="sec-bg-map" style="background-image: url(images/map.jpg)"></div>
+            <div class="sec-bg-map">
+              <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A409e0c028bc4891ec422a39ed563de84150107a429abbf08e8e4b001c979e4c3&amp;amp;width=100%25&amp;amp;height=100%&amp;amp;lang=ru_RU&amp;amp;scroll=false"></script>
+            </div>
           </div>
           <div class="container container-default container-contact">
             <div class="contact-wrap">
@@ -397,7 +399,7 @@
                   <div class="contacts-main__bold">Компания ООО «Biomix»</div>
                   <div class="contacts-main__default">Россия, 603037, г. Нижний Новгород ул. Федосеенко, д. 57А</div>
                 </div>
-                <div class="contacts-main__item"><a class="contacts-main__bold" href="">+7 (950) 353-9999</a><a class="contacts-main__default" href="">manger@biomix.site</a></div>
+                <div class="contacts-main__item"><a class="contacts-main__bold" href="tel:89503539999">+7 (950) 353-9999</a><a class="contacts-main__default" href="mailto:manger@biomix.site">manger@biomix.site</a></div>
               </div><a class="ask-question-link" data-fancybox href="#popup-consult"><span>Задать вопрос</span>
                 <svg width="30" height="16" viewbox="0 0 30 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M29.7071 8.70711C30.0976 8.31658 30.0976 7.68342 29.7071 7.29289L23.3431 0.928932C22.9526 0.538408 22.3195 0.538408 21.9289 0.928932C21.5384 1.31946 21.5384 1.95262 21.9289 2.34315L27.5858 8L21.9289 13.6569C21.5384 14.0474 21.5384 14.6805 21.9289 15.0711C22.3195 15.4616 22.9526 15.4616 23.3431 15.0711L29.7071 8.70711ZM0 9H29V7H0V9Z" fill="#010066"></path>
@@ -485,11 +487,11 @@
       <div class="popup-consult__title">Получить <br> консультацию</div>
       <form class="popup-consult__form" action="send.php" method="POST" onsubmit="send(event, 'send.php')">
         <input class="input-text" type="text" name="surname" placeholder="ФИО">
-        <input class="input-text" type="phone" name="phone" placeholder="Номер телефона">
+        <input class="input-text" type="phone" name="phone" placeholder="Номер телефона" required>
         <input class="input-text" type="email" name="email" placeholder="Email">
         <textarea name="comment" placeholder="Комментарий"></textarea>
         <label>
-          <input class="input-checkbox" type="checkbox" name="isPolicy"><b></b>
+          <input class="input-checkbox" type="checkbox" name="isPolicy" required><b></b>
           <p>Я принимаю условия <a href="#">Пользовательского соглашения</a></p>
         </label>
         <input type="submit" value="Отправить">

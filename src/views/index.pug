@@ -305,7 +305,8 @@ block main
 		.js-fp-section.fp-section( data-section-control-id="con tacts-control" data-item-color="#2DBD66" data-phone-color="#010066" data-copyright-color="#010066" data-copyright-white-bg="true")
 			.contact-bg
 				.sec-bg(style="background-image: url(images/sec1.jpg)")
-				.sec-bg-map(style="background-image: url(images/map.jpg)")
+				.sec-bg-map
+					script(type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A409e0c028bc4891ec422a39ed563de84150107a429abbf08e8e4b001c979e4c3&amp;width=100%25&amp;height=100%&amp;lang=ru_RU&amp;scroll=false")
 			.container.container-default.container-contact
 				.contact-wrap
 					h2.contacts-title Обратная связь
@@ -314,8 +315,8 @@ block main
 							.contacts-main__bold Компания ООО «Biomix»
 							.contacts-main__default Россия, 603037, г. Нижний Новгород ул. Федосеенко, д. 57А
 						.contacts-main__item
-							a.contacts-main__bold(href="") +7 (950) 353-9999
-							a.contacts-main__default(href="") manger@biomix.site
+							a.contacts-main__bold(href="tel:89503539999") +7 (950) 353-9999
+							a.contacts-main__default(href="mailto:manger@biomix.site") manger@biomix.site
 					a.ask-question-link(data-fancybox href="#popup-consult")
 						span Задать вопрос
 						svg(width='30' height='16' viewbox='0 0 30 16' fill='none' xmlns='http://www.w3.org/2000/svg')

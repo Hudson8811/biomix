@@ -4,8 +4,8 @@ mixin popup()
 		.popup-consult__title Получить <br> консультацию
 		form(action='send.php' method='POST' onsubmit="send(event, 'send.php')").popup-consult__form
 			+input('text', 'surname', 'ФИО')
-			+input('phone', 'phone', 'Номер телефона')
+			+input('phone', 'phone', 'Номер телефона', '', true)
 			+input('email', 'email', 'Email')
 			+input('textarea', 'comment', 'Комментарий')
-			+input('checkbox', 'isPolicy', '', 'Я принимаю условия <a href="#">Пользовательского соглашения</a>')
+			+input('checkbox', 'isPolicy', '', 'Я принимаю условия <a href="#">Пользовательского соглашения</a>', true)
 			input(type='submit' value='Отправить')

@@ -27,12 +27,12 @@ mixin breadcrumbs(paddingLeft=false,item1="", item2="", item3="", item4="", item
 					a.breadcrumbs-item-a(href="")
 						=item5
 
-mixin input(type, inputName, holder, label)
+mixin input(type, inputName, holder, label, isRequired)
 	if type === 'text' || type === 'phone' || type === 'email'
-		input.input-text(type=type, name=inputName, placeholder=holder)
+		input.input-text(type=type, name=inputName, placeholder=holder, required=isRequired)
 	if type === 'checkbox'
 		label
-			input.input-checkbox(type='checkbox', name=inputName)
+			input.input-checkbox(type='checkbox', name=inputName, required=isRequired)
 			b
 			p!=label
 	if type === 'textarea'
