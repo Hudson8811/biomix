@@ -56,6 +56,21 @@ body {
 
 //////////////
 
+.nav-info {
+	display: flex;
+	align-items: center;
+	position: absolute;
+	bottom: 75px;
+	right: 18vw;
+	z-index: 5;
+	
+	span {
+		font-size: 16px;
+		color: #fff;
+		margin: 0 18px;
+	}
+}
+
 .sec-bg {
 	position: absolute;
 	top: 0;

@@ -3,6 +3,10 @@
         margin-bottom: 20px;
     }
 
+    .nav-info {
+        bottom: 20px;
+    }
+
     .container-default {
         padding-bottom: 80px;
     }
@@ -34,6 +38,10 @@
 }
 
 @media (max-width: 907px) {
+    .nav-info {
+        display: none;
+    }
+
     .container {
         max-width: calc(100% - 17px * 2);
     }

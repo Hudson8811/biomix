@@ -20,6 +20,23 @@
             <h1 class="s1-heading">Свежий воздух, чистая вода,<br> здоровая почва</h1>
             <div class="s1-description">Мы производим продукты и оборудование для улучшения жизни, сохранения природы, экономии энергоресурсов и решения экологических проблем. Мы хотим и можем сделать мир чище,  жизнь безопаснее, защиту природы быстрой, лёгкой и эффективной.</div>
           </div>
+          <div class="nav-info"><span>Для навигации используйте:</span>
+            <svg width="36" height="56" viewBox="0 0 36 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="1" y="1" width="34" height="54" rx="17" stroke="white" stroke-width="2"></rect>
+              <rect x="13.5" y="8.5" width="9" height="18" rx="4.5" stroke="white"></rect>
+              <rect x="16" y="12" width="4" height="7" rx="2" fill="white"></rect>
+            </svg><span>или</span>
+            <svg width="80" height="52" viewBox="0 0 80 52" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="1" y="29" width="22" height="22" rx="2" stroke="white" stroke-width="2"></rect>
+              <rect x="29" y="29" width="22" height="22" rx="2" stroke="white" stroke-width="2"></rect>
+              <rect x="29" y="1" width="22" height="22" rx="2" stroke="white" stroke-width="2"></rect>
+              <rect x="57" y="29" width="22" height="22" rx="2" stroke="white" stroke-width="2"></rect>
+              <path d="M6.29289 39.2929C5.90237 39.6834 5.90237 40.3166 6.29289 40.7071L12.6569 47.0711C13.0474 47.4616 13.6805 47.4616 14.0711 47.0711C14.4616 46.6805 14.4616 46.0474 14.0711 45.6569L8.41421 40L14.0711 34.3431C14.4616 33.9526 14.4616 33.3195 14.0711 32.9289C13.6805 32.5384 13.0474 32.5384 12.6569 32.9289L6.29289 39.2929ZM17 39L7 39L7 41L17 41L17 39Z" fill="white"></path>
+              <path d="M73.7071 40.7071C74.0976 40.3166 74.0976 39.6834 73.7071 39.2929L67.3431 32.9289C66.9526 32.5384 66.3195 32.5384 65.9289 32.9289C65.5384 33.3195 65.5384 33.9526 65.9289 34.3431L71.5858 40L65.9289 45.6569C65.5384 46.0474 65.5384 46.6805 65.9289 47.0711C66.3195 47.4616 66.9526 47.4616 67.3431 47.0711L73.7071 40.7071ZM63 41H73V39H63V41Z" fill="white"></path>
+              <path d="M39.2929 45.7071C39.6834 46.0976 40.3166 46.0976 40.7071 45.7071L47.0711 39.3431C47.4616 38.9526 47.4616 38.3195 47.0711 37.9289C46.6805 37.5384 46.0474 37.5384 45.6569 37.9289L40 43.5858L34.3431 37.9289C33.9526 37.5384 33.3195 37.5384 32.9289 37.9289C32.5384 38.3195 32.5384 38.9526 32.9289 39.3431L39.2929 45.7071ZM39 35L39 45L41 45L41 35L39 35Z" fill="white"></path>
+              <path d="M40.7071 6.29289C40.3166 5.90237 39.6834 5.90237 39.2929 6.29289L32.9289 12.6569C32.5384 13.0474 32.5384 13.6805 32.9289 14.0711C33.3195 14.4616 33.9526 14.4616 34.3431 14.0711L40 8.41421L45.6569 14.0711C46.0474 14.4616 46.6805 14.4616 47.0711 14.0711C47.4616 13.6805 47.4616 13.0474 47.0711 12.6569L40.7071 6.29289ZM41 17L41 7L39 7L39 17L41 17Z" fill="white"></path>
+            </svg>
+          </div>
         </div>
         <div class="js-fp-section fp-section" data-section-control-id="mission-control" data-section-with-slides="true">
           <div class="js-fp-slide fp-slide" data-anchor="1" data-item-color="#347EE9" data-phone-color="#ffffff" data-copyright-color="#ffffff">
@@ -464,14 +481,19 @@
     </main>
     <footer class="site-footer"></footer>
     <div class="popup-consult" id="popup-consult" style="display: none;">
-      <div class="popup-consult__top">
-        <div class="popup-consult__title">Получить <br> консультацию</div>
-        <form class="popup-consult__form" action="/" method="POST">
-          <input class="input-text" type="text" name="surname" placeholder="ФИО">
-          <input class="input-text" type="phone" name="phone" placeholder="Номер телефона">
-          <input class="input-text" type="email" name="email" placeholder="Email">
-        </form>
-      </div>
+      <div class="popup-consult__top"></div>
+      <div class="popup-consult__title">Получить <br> консультацию</div>
+      <form class="popup-consult__form" action="send.php" method="POST" onsubmit="send(event, 'send.php')">
+        <input class="input-text" type="text" name="surname" placeholder="ФИО">
+        <input class="input-text" type="phone" name="phone" placeholder="Номер телефона">
+        <input class="input-text" type="email" name="email" placeholder="Email">
+        <textarea name="comment" placeholder="Комментарий"></textarea>
+        <label>
+          <input class="input-checkbox" type="checkbox" name="isPolicy"><b></b>
+          <p>Я принимаю условия <a href="#">Пользовательского соглашения</a></p>
+        </label>
+        <input type="submit" value="Отправить">
+      </form>
     </div>
     <script src="js/main.js"></script>
   </body>
