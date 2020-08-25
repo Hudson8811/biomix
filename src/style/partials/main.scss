@@ -42,6 +42,11 @@ body {
 	padding-right: 306px;
 }
 
+.fp-tableCell {
+	display: flex;
+	align-items: center;
+}
+
 #jGrowl {
 	z-index: 999999;
 }
@@ -385,6 +390,10 @@ a.contacts-main__default {
 			transform: translateX(5px);
 		}
 	}
+}
+
+.copyright-wrap--mobile {
+	display: none;
 }
 
 
