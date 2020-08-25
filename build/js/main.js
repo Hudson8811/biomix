@@ -256,7 +256,7 @@ $(document).ready(function () {
 
 
 
-	if (window.matchMedia("(min-width: 908px) and (min-height: 760px)").matches) {
+	if (window.matchMedia("(min-width: 908px) and (min-height: 500px)").matches) {
 		initFullPage();
 	} else {
 		changeMissionBg('set');
@@ -265,7 +265,7 @@ $(document).ready(function () {
 	}
 
 	$(window).resize(function () {
-		if (window.matchMedia("(min-width: 908px) and (min-height: 760px)").matches) {
+		if (window.matchMedia("(min-width: 908px) and (min-height: 500px)").matches) {
 			if ((!$('#fullpage').hasClass('fullpage-wrapper')) || $('#fullpage').hasClass('fp-destroyed')) {
 				initFullPage();
 			}
