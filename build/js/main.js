@@ -90,8 +90,6 @@ $(document).ready(function () {
 	});
 
 });
-
-
 $(document).keyup(function(e) {
 	if (e.key === "ArrowDown" || e.keyCode === 40) {
 		var evt = document.createEvent('MouseEvents');

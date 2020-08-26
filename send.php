@@ -23,11 +23,11 @@ $mail->Username = 'user';
 $mail->Password = 'pass';
 $mail->SMTPSecure = 'ssl';
 $mail->Port = 465;
-$mail->setFrom('info@biomix.site', 'biomix');
+$mail->setFrom('info@biomix.site', 'Biomix');
 
 $mail->addAddress('info@biomix.site');
 
 $mail->isHTML(true);
-$mail->Subject = 'Получить консультацию';
-$mail->Body = 'Заявка на получение персональной консультации';
+$mail->Subject = 'Заявка с сайта biomix';
+$mail->Body = 'ФИО ' . $name . '<br>' . 'Номер телефона - ' . $phone . '<br>' . 'Email - ' . $email . '<br>' . 'Комментарий - ' . $comment;
 $mail->send();
