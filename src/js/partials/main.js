@@ -1,3 +1,19 @@
+$(document).keyup(function(e) {
+	console.log( e.keyCode);
+	if (e.key === "ArrowDown" || e.keyCode === 40) {
+		var evt = document.createEvent('MouseEvents');
+		evt.initEvent('wheel', true, true);
+		evt.deltaY = +120;
+		document.dispatchEvent(evt);
+	}
+	if (e.key === "ArrowUp" || e.keyCode === 38) {
+		var evt = document.createEvent('MouseEvents');
+		evt.initEvent('wheel', true, true);
+		evt.deltaY = -120;
+		document.dispatchEvent(evt);
+	}
+});
+
 var productsMenu,
 	headerPhonePath,
 	headerCPT, //.contact-phone__text
@@ -13,7 +29,7 @@ function initFullPage() {
 		scrollHorizontally: true,
 		anchors: ['home', 'mission', 'products', 'contacts'],
 		controlArrows: false,
-	//	keyboardScrolling: false,
+		keyboardScrolling: false,
 		sectionSelector: '.fp-section',
 		slideSelector: '.fp-slide',
 		afterLoad: function (origin, destination, direction) { //переход между секциями
