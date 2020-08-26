@@ -93,7 +93,6 @@ $(document).ready(function () {
 
 
 $(document).keyup(function(e) {
-	console.log( e.keyCode);
 	if (e.key === "ArrowDown" || e.keyCode === 40) {
 		var evt = document.createEvent('MouseEvents');
 		evt.initEvent('wheel', true, true);
